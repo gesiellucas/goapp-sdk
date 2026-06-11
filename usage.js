@@ -1,18 +1,24 @@
+import dotenv from 'dotenv';
+// Carrega as variáveis de ambiente. .env.local tem prioridade sobre .env
+dotenv.config({ path: '.env.local' });
+dotenv.config();
+
 import { GestaoEapSDK } from './index.js';
 
 // Exemplo de uso do SDK do Gestão EAP.
 //
 // Para executar este arquivo de exemplo localmente:
-// 1. Configure as variáveis de ambiente opcionais ou altere os valores abaixo.
+// 1. Configure as variáveis de ambiente opcionais ou altere os valores no arquivo .env ou .env.local.
 // 2. Execute o comando no terminal:
 //    node usage.js
 
-const baseUrl = process.env.SDK_BASE_URL || 'http://localhost:3000';
-const token = process.env.SDK_ACCESS_TOKEN || 'eap_sdk_secure_token_2026_xxx';
+
+const baseUrl = process.env.SDK_BASE_URL || 'https://goapp.rotaria.net';
+const token = process.env.SDK_ACCESS_TOKEN || 'HaHB1Twd7er0BMGZQ876kSwVWfARMOsVKga4xqjsE6gqugFeeIJzuhVqmr0pD1LZG6yTXAgKOpoezOo6R2K7XqyXwIaf75tH5tqDEA4rzLrCoOIvPVpOF56cri8c';
 
 console.log(`Inicializando o Gestão EAP SDK...`);
 console.log(`URL Base: ${baseUrl}`);
-console.log(`Token: ${token.substring(0, 6)}... (oculto)`);
+console.log(`Token: ${token ? token.substring(0, 6) + '... (oculto)' : 'indefinido'}`);
 
 // 1. Inicializando o cliente do SDK
 const sdk = new GestaoEapSDK({ baseUrl, token });
@@ -111,7 +117,7 @@ async function exemploSaidasEmLote() {
 // Execução das funções de exemplo
 async function main() {
   await exemploSaidaUnica();
-  await exemploSaidasEmLote();
+  // await exemploSaidasEmLote();
 }
 
 main().catch(console.error);

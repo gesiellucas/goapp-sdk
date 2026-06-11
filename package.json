@@ -8,6 +8,9 @@
   "scripts": {
     "test": "node --test"
   },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
