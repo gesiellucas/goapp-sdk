@@ -1,0 +1,21 @@
+{
+  "name": "goapp-sdk",
+  "version": "1.0.0",
+  "description": "SDK para envio externo de dados de Saídas do módulo Gestão EAP - GoApp",
+  "main": "index.js",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "gestao-eap",
+    "sdk",
+    "supabase"
+  ],
+  "author": "Gesiel Lucas Ferreira",
+  "license": "ISC"
+}
