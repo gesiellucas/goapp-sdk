@@ -26,7 +26,7 @@ async function exemploSaidaUnica() {
   const saida = {
     // ── Campos Obrigatórios ──
     CODEAP: '1700-1500-3500-00159', // Código EAP (WBS)
-    CODCONTR: '4171485b-2db6-4276-bbcf-4491b5fb6397',                 // ID UUID ou Código Livre/externalCode do contrato (Numérico ou UUID)
+    CODCONTR: 65212,                // Código Livre/external_code do contrato (mais comum) ou ID UUID do contrato
     PAGO: 8600,                    // Valor pago (Custo Executado)
     DATA: '2026-06-11',            // Data no formato YYYY-MM-DD
 

@@ -74,7 +74,7 @@ export class GestaoEapSDK {
    * Insert a single executed output (Saída).
    * @param {Object} saida - The Saída object
    * @param {string} saida.CODEAP - EAP Code for comparison and insertion validation (required)
-   * @param {string|number} saida.CODCONTR - Contract ID (UUID) or externalCode (required)
+   * @param {string|number} saida.CODCONTR - Contract externalCode (more common) or ID UUID (required)
    * @param {number} saida.PAGO - Executed cost (valor pago) (required)
    * @param {string} saida.DATA - Payment date in YYYY-MM-DD format (required)
    * @param {string} [saida.CODEMP] - Company identifier (saved in metadata)
@@ -91,7 +91,6 @@ export class GestaoEapSDK {
    * @param {string} [saida.DETALHE] - Saved in metadata
    * @param {string} [saida.CHAVENFE] - Saved in metadata
    * @param {string} [saida.CODITCONTR] - Saved in metadata
-   * @param {string} [saida.CODEAP_1] - Saved in metadata
    */
   async addSaida(saida) {
     if (!saida) {
